@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web para gestionar tareas diarias">
+    <title>Todo List - Gestor de Tareas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">✨ Mi Lista de Tareas Mágica ✨</h1>
+        <p class="subtitle">Organiza tu día con estilo y amor 💕</p>
+    </header>
+
+    <main>
+        <section class="task-input-section">
+            <form id="taskForm" class="task-form">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Escribe una nueva tarea..."
+                    aria-label="Nueva tarea"
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn-add">
+                    ➕ Agregar
+                </button>
+            </form>
+        </section>
+
+        <section class="task-stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Total:</span>
+                    <span id="totalTasks" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Pendientes:</span>
+                    <span id="pendingTasks" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completadas:</span>
+                    <span id="completedTasks" class="stat-value">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    Todas
+                </button>
+                <button class="filter-btn" data-filter="pending">
+                    Pendientes
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    Completadas
+                </button>
+            </div>
+        </section>
+
+        <section class="task-list-section">
+            <ul id="taskList" class="task-list">
+                <!-- Las tareas se agregarán dinámicamente aquí -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>🎉 No hay tareas pendientes</p>
+                <p class="empty-subtitle">¡Agrega tu primera tarea para comenzar!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con 💖 para organizar tus sueños</p>
+        <p class="footer-small">&copy; 2026 Todo List App | Prueba Técnica</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
